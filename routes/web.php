@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AseiasPublic;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -35,4 +36,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+//!Public
+Route::get('/public', [AseiasPublic::class, 'show'])->name('aseias.show');
+
+require __DIR__ . '/auth.php';
