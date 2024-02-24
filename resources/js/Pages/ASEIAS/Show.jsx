@@ -15,7 +15,7 @@ function Show() {
                 </h2>
             }
             links={[
-                { href: "/", text: "Home" },
+                { href: "/public", text: "Home" },
                 { href: "/about", text: "About" },
                 { href: "/contact", text: "Contact" },
             ]}

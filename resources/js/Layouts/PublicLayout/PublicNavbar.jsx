@@ -4,7 +4,7 @@ import Dropdown from "@/Components/Dropdown";
 import NavLink from "@/Components/NavLink";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
 import { Link, usePage } from "@inertiajs/react";
-
+import "/resources/css/app.css";
 export default function PublicLayout({
     children,
     logoUrl,
@@ -35,7 +35,7 @@ export default function PublicLayout({
     const { url } = usePage();
 
     return (
-        <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+        <div className="body-background min-h-screen bg-gray-100 dark:bg-gray-900">
             <nav className="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
@@ -68,11 +68,12 @@ export default function PublicLayout({
                         </div>
 
                         <div className="hidden sm:flex sm:items-center sm:ms-6">
+                            {/* Boton darkmode */}
                             <button
-                                className="bg-slate-200 px-2 py-2 rounded hover:bg-slate-300 text-gray-800 dark:text-white-200"
+                                className="bg-slate-200 h-7 w-7 rounded-full dark:hover:bg-slate-400 dark:bg-gray-700 hover:bg-slate-300 text-gray-800 dark:text-white-200"
                                 onClick={handleChangeTheme}
                             >
-                                dark
+                                <i className="fa-regular fa-moon dark:text-white"></i>
                             </button>
                             <div className="ms-3 relative">
                                 <Dropdown>
