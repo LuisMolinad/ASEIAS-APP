@@ -38,5 +38,9 @@ Route::middleware('auth')->group(function () {
 
 //!Public
 Route::get('/public', [AseiasPublic::class, 'show'])->name('aseias.show');
+Route::get('/contact', [AseiasPublic::class, 'contact'])->name('aseias.contact');
+
+
+
 
 require __DIR__ . '/auth.php';

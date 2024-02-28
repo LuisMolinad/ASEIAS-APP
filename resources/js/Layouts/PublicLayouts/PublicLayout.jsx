@@ -5,6 +5,7 @@ import NavLink from "@/Components/NavLink";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
 import { Link, usePage } from "@inertiajs/react";
 import "/resources/css/app.css";
+import ThemeToggleButton from "@/Components/ThemeToggleButton";
 export default function PublicLayout({
     children,
     logoUrl,
@@ -13,22 +14,6 @@ export default function PublicLayout({
     dropdownLinks,
     header,
 }) {
-    // Inicio darkmode
-    const [theme, setTheme] = useState("light");
-
-    useEffect(() => {
-        if (theme == "dark") {
-            document.querySelector("html").classList.add("dark");
-        } else {
-            document.querySelector("html").classList.remove("dark");
-        }
-    });
-
-    const handleChangeTheme = () => {
-        setTheme((prevTheme) => (prevTheme == "light" ? "dark" : "light"));
-    };
-    // Fin darkmode
-
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
 
@@ -69,12 +54,7 @@ export default function PublicLayout({
 
                         <div className="hidden sm:flex sm:items-center sm:ms-6">
                             {/* Boton darkmode */}
-                            <button
-                                className="bg-slate-200 h-7 w-7 rounded-full dark:hover:bg-slate-400 dark:bg-gray-700 hover:bg-slate-300 text-gray-800 dark:text-white-200"
-                                onClick={handleChangeTheme}
-                            >
-                                <i className="fa-regular fa-moon dark:text-white"></i>
-                            </button>
+                            <ThemeToggleButton />
                             <div className="ms-3 relative">
                                 <Dropdown>
                                     <Dropdown.Trigger>

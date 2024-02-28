@@ -4,24 +4,9 @@ import Dropdown from "@/Components/Dropdown";
 import NavLink from "@/Components/NavLink";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
 import { Link } from "@inertiajs/react";
+import ThemeToggleButton from "@/Components/ThemeToggleButton";
 
 export default function Authenticated({ user, header, children }) {
-    //* Inicio darkmode
-    const [theme, setTheme] = useState("light");
-
-    useEffect(() => {
-        if (theme == "dark") {
-            document.querySelector("html").classList.add("dark");
-        } else {
-            document.querySelector("html").classList.remove("dark");
-        }
-    });
-
-    const handleChangeTheme = () => {
-        setTheme((prevTheme) => (prevTheme == "light" ? "dark" : "light"));
-    };
-
-    //*Fin darkmode
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
 
@@ -48,12 +33,8 @@ export default function Authenticated({ user, header, children }) {
                         </div>
 
                         <div className="hidden sm:flex sm:items-center sm:ms-6">
-                            <button
-                                className="bg-slate-200 h-7 w-7 rounded-full dark:hover:bg-slate-400 dark:bg-gray-700 hover:bg-slate-300 text-gray-800 dark:text-white-200"
-                                onClick={handleChangeTheme}
-                            >
-                                <i className="fa-regular fa-moon dark:text-white"></i>
-                            </button>
+                            {/* Boton darkmode */}
+                            <ThemeToggleButton />
                             <div className="ms-3 relative">
                                 <Dropdown>
                                     <Dropdown.Trigger>

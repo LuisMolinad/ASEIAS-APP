@@ -14,4 +14,10 @@ class AseiasPublic extends Controller
         return Inertia::render('ASEIAS/Show', [
             /*  'pizza' => $pizza, */]);
     }
+
+    public function contact(/* Pizza $pizza */): Response
+    {
+        return Inertia::render('ASEIAS/contact', [
+            /*  'pizza' => $pizza, */]);
+    }
 }
