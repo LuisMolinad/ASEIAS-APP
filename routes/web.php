@@ -37,8 +37,8 @@ Route::middleware('auth')->group(function () {
 });
 
 //!Public
-Route::get('/public', [AseiasPublic::class, 'show'])->name('aseias.show');
-Route::get('/contact', [AseiasPublic::class, 'contact'])->name('aseias.contact');
+Route::get('/aseias/index', [AseiasPublic::class, 'index'])->name('aseias.index');
+Route::get('/aseias/contact', [AseiasPublic::class, 'contact'])->name('aseias.contact');
 
 
 

@@ -12,9 +12,9 @@ function contact() {
                 </h2>
             }
             links={[
-                { href: "/public", text: "Home" },
+                { href: "/aseias/index", text: "Home" },
                 { href: "/about", text: "About" },
-                { href: "/contact", text: "Contact" },
+                { href: "/aseias/contact", text: "Contact" },
             ]}
             dropdownLinks={[
                 { href: "/profile/edit", text: "Profile" },

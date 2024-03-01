@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 
 class AseiasPublic extends Controller
 {
-    public function show(/* Pizza $pizza */): Response
+    public function index(/* Pizza $pizza */): Response
     {
-        return Inertia::render('ASEIAS/Show', [
+        return Inertia::render('ASEIAS/index', [
             /*  'pizza' => $pizza, */]);
     }
 

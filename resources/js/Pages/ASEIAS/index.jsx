@@ -1,8 +1,9 @@
 import PublicLayout from "@/Layouts/PublicLayouts/PublicLayout";
 import React from "react";
 import { Head } from "@inertiajs/react";
-
-function Show() {
+//*Importando los estilos css
+import "/resources/css/app.css";
+function index() {
     /*  return <GuestLayout></GuestLayout>; */
     return (
         <PublicLayout
@@ -14,14 +15,15 @@ function Show() {
                 </h2>
             }
             links={[
-                { href: "/public", text: "Home" },
-                { href: "/about", text: "About" },
-                { href: "/contact", text: "Contact" },
+                { href: "/aseias/index", text: "Inicio" },
+                { href: "/about", text: "Sobre Nosotros" },
+                { href: "/aseias/contact", text: "Contáctanos" },
             ]}
             dropdownLinks={[
                 { href: "/profile/edit", text: "Profile" },
                 { href: "/logout", text: "Log Out" },
             ]}
+            bodyBackgroundClass="body-background-ASEIAS"
         >
             {/* Contenido de la página aquí */}
             <Head title="ASEIAS Public" />
@@ -38,4 +40,4 @@ function Show() {
     );
 }
 
-export default Show;
+export default index;
