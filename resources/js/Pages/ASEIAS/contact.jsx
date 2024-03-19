@@ -21,7 +21,7 @@ function contact() {
                 { href: "/logout", text: "Log Out" },
             ]}
         >
-            {/* Contenido de la página aquí */}
+            {/*  Contenido de la página aquí */}
             <Head title="ASEISI Public" />
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
